@@ -14,6 +14,7 @@ const pool = new Pool({
 
 pool.connect((error) => {
     if (error) {
+        console.log(process.env.DB_HOST);
         console.error('Помилка підключення до бази даних: ' + error.message);
         return;
     }
